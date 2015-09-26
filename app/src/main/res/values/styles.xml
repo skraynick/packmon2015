@@ -57,7 +57,7 @@
 
     <!-- Action bar -->
     <style name="PackmonActionBar">
-        <item name="android:background">#00b0ff</item>
+        <item name="android:background">@color/packmon_blue</item>
         <item name="android:displayOptions">showHome|homeAsUp|useLogo|showTitle</item>
         <item name="android:height">?android:attr/actionBarSize</item>
         <item name="android:textColor">#ffffff</item>
