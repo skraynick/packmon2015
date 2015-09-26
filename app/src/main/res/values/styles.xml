@@ -1,8 +1,88 @@
 <resources>
 
+    <style name="AppBaseTheme">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="AppBaseTheme">
         <!-- Customize your theme here. -->
+        <item name="android:actionBarStyle">@style/PackmonActionBar</item>
+        <item name="android:actionBarTabTextStyle">@style/PackmonTabLayout</item>
+        <item name="android:actionBarTabStyle">@style/PackmonTabBackground</item>
+        <item name="android:actionBarTabBarStyle">@style/PackmonTabContainer</item>
+        <item name="android:actionMenuTextAppearance">@style/PackmonActionBarTextStyle</item>
+        <item name="android:itemTextAppearance">@style/PackmonMenuText</item>
+        <item name="android:popupMenuStyle">@style/PackmonMenuPopup</item>
+        <item name="android:dropDownListViewStyle">@style/PackmonMenuBackground</item>
+        <item name="android:actionBarWidgetTheme">@style/Theme.stylingactionbar.widget</item>
+        <item name="android:textViewStyle">@style/Theme.AppCompat</item>
+        <item name="android:spinnerDropDownItemStyle">@style/PackmonSpinnerItem</item>
+
+    </style>
+
+    <style name="Theme.stylingactionbar.widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PackmonMenuPopup</item>
+        <item name="android:dropDownListViewStyle">@style/PackmonMenuBackground</item>
+    </style>
+
+    <style name="PackmonMenuBackground" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@color/packmon_blue</item>
+    </style>
+
+    <style name="PackmonMenuPopup" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@color/white</item>
+    </style>
+
+    <style name="LoginFormContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="MooSpinnerItem" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textAppearance">@style/PackmonSpinnerItem</item>
+    </style>
+
+    <style name="PackmonSpinnerItem" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/packmon_blue</item>
+    </style>
+
+    <style name="PackmonMenuText">
+        <item name="android:textColor">@color/packmon_blue</item>
+    </style>
+
+    <!-- Action bar -->
+    <style name="PackmonActionBar">
+        <item name="android:background">#00b0ff</item>
+        <item name="android:displayOptions">showHome|homeAsUp|useLogo|showTitle</item>
+        <item name="android:height">?android:attr/actionBarSize</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:titleTextStyle">@style/PackmonActionBarTextStyle</item>
+    </style>
+    <!-- Tab Layout -->
+
+    <style name="PackmonTabLayout" parent="android:style/Widget.Holo.ActionBar.TabText">
+       <!-- <item name="android:textColor">@color/tab_text_colour</item> -->
+    </style>
+
+    <style name="PackmonTabBackground" parent="android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:minWidth">90dip</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:background">@color/packmon_blue</item>
+    </style>
+
+    <style name="PackmonTabContainer" parent="android:style/Widget.ActionBar.TabBar">
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="PackmonActionBarTextStyle" parent="android:style/TextAppearance.Holo.Widget.ActionBar.Menu">
+        <item name="android:textColor">#ffffff</item>
     </style>
 
 </resources>
