@@ -90,7 +90,7 @@ public class Gestures implements MapGesture.OnGestureListener {
                 new com.here.android.mpa.common.Image();
 
         try {
-            myImage.setImageResource(R.drawable.BoxClosed);
+            myImage.setImageResource(R.drawable.box_closed);
         } catch (IOException e) {
             //finish();
         }
