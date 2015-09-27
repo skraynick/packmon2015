@@ -1,13 +1,12 @@
+package de.packmon.utils;
+
 import android.graphics.PointF;
 
 import com.here.android.mpa.common.ViewObject;
 import com.here.android.mpa.mapping.Map;
 import com.here.android.mpa.mapping.MapGesture;
 
-import java.io.IOException;
 import java.util.List;
-
-import de.packmon.R;
 
 /**
  * Created by sarah on 26.09.15.
@@ -89,11 +88,11 @@ public class Gestures implements MapGesture.OnGestureListener {
         com.here.android.mpa.common.Image myImage =
                 new com.here.android.mpa.common.Image();
 
-        try {
-            myImage.setImageResource(R.drawable.box_closed);
+      /*  try {
+            myImage.setImageResource(R.drawable.boxclosed);
         } catch (IOException e) {
             //finish();
-        }
+        }*/
 
     // Create the MapMarker
         /*GeoCoordinate geoLocation = new GeoCoordinate();
