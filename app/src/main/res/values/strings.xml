@@ -2,4 +2,8 @@
     <string name="app_name">Packmon</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+<string name="find_my_stuff">Where Is My Stuff</string>
+<string name="tracking_code">Enter your tracking Code</string>
+    <string name="find">Find</string>
+    <string name="cancel">Cancel</string>
 </resources>
