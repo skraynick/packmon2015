@@ -1,7 +1,6 @@
 package de.packmon;
 
 import android.app.Fragment;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +10,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.ScrollView;
 import android.widget.Toast;
 
 
@@ -70,6 +68,6 @@ public class ShipmentInformationFragment extends Fragment implements AdapterView
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Toast.makeText(getActivity(), "Clicked: " + position, Toast.LENGTH_SHORT).show();
         ImageView img = (ImageView) view;
-        img.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.box_closed));
+        img.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.boxclosed));
     }
 }
