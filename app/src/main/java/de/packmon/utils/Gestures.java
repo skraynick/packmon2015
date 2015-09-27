@@ -94,10 +94,10 @@ public class Gestures implements MapGesture.OnGestureListener {
             //finish();
         }*/
 
-    // Create the MapMarker
+    // Create the MapMarkerUtil
         /*GeoCoordinate geoLocation = new GeoCoordinate();
-        MapMarker myMapMarker =
-               // new MapMarker(new GeoCoordinate(GeoCoordinategetCoordinate()), myImage);
+        MapMarkerUtil myMapMarker =
+               // new MapMarkerUtil(new GeoCoordinate(GeoCoordinategetCoordinate()), myImage);
 
         //ap.addMapObject(myMapMarker);*/
         return false;

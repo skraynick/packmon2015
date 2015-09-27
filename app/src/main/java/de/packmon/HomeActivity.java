@@ -2,28 +2,25 @@ package de.packmon;
 
 import android.app.AlertDialog;
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.here.android.mpa.common.GeoCoordinate;
 import com.here.android.mpa.common.OnEngineInitListener;
 import com.here.android.mpa.mapping.Map;
 import com.here.android.mpa.mapping.MapFragment;
 
-import de.packmon.utils.RoutingTool;
+import de.packmon.utils.MapMarkerUtil;
 
 public class HomeActivity extends FragmentActivity {
 
@@ -40,8 +37,15 @@ public class HomeActivity extends FragmentActivity {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_home);
-            RenderMap renderMap = new RenderMap();
-            renderMap.execute(map);
+            //RenderMap renderMap = new RenderMap();
+            //renderMap.execute(map);
+
+            if (savedInstanceState == null) {
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                ShipmentInformationFragment fragment = new ShipmentInformationFragment();
+                transaction.replace(R.id.fragment_container, fragment);
+                transaction.commit();
+            }
         }
 
     @Override
@@ -75,13 +79,18 @@ public class HomeActivity extends FragmentActivity {
                     public void onClick(DialogInterface dialog, int id) {
                         trackingCodeInputed = editText.getText().toString();
 
-                        RoutingTool routing = new RoutingTool(
+                       /* RoutingTool routing = new RoutingTool(
                                 52.3667,
                                 52.5167,
                                 4.9000,
                                 13.3833,
                                 map);
-                        Log.i("item", trackingCodeInputed);
+                        Log.i("item", trackingCodeInputed);*/
+
+                        MapMarkerUtil mapMarkerUtil = new MapMarkerUtil();
+                        mapMarkerUtil.setMarker(R.drawable.boxclosed, 52.3667, 4.9000, map);
+                        MapMarkerUtil mapMarkerUtil2 = new MapMarkerUtil();
+                        mapMarkerUtil2.setMarker(R.drawable.boxclosed, 52.5167, 13.3833, map);
                     }
                 })
                 .setNegativeButton("Cancel",
